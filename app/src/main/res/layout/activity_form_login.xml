@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FormLogin">
+
+        <!-- Background top e nome -->
+        <View
+            android:id="@+id/top_Bg"
+            style="@style/top_bg"
+            android:background="@drawable/top_bg"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="LIEBHERR"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Container e info -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container"
+            style="@style/container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="Login"
+                    android:textColor="@color/black"
+                    android:textSize="40dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/edit_nome"
+                    style="@style/Edit_text"
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="@string/nome"
+                    android:drawableStart="@drawable/name_icon"
+                    android:inputType="textPersonName"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/edit_rg"
+                    style="@style/Edit_text"
+                    android:background="@drawable/edit_text_bg"
+                    android:hint="@string/rg"
+                    android:drawableStart="@drawable/rg_icon"
+                    android:inputType="number"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:paddingStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_senha"
+                    style="@style/Edit_text"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edit_text_bg"
+                    android:drawableStart="@drawable/senha_icon"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:hint="@string/senha"
+                    android:inputType="textPassword"
+                    android:paddingStart="10dp" />
+
+                <TextView
+                    android:id="@+id/esqueci_senha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/esqueci_senha"
+                    android:textColor="@color/my_primary" />
+
+                <!-- Botão -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/bt_login"
+                    style="@style/bt_login"
+                    android:background="@drawable/button_bg"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Logo e card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            style="@style/container_logo"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="21dp"
+            app:layout_constraintBottom_toTopOf="@+id/container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_bg">
+
+                <ImageView style="@style/logo" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ProgressBar-->
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/my_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/text_tela_cadastro"
+            style="@style/container_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/text_cadastro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressbar"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

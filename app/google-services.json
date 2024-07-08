@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "670629745408",
+    "project_id": "projeto-calculadora-fcea3",
+    "storage_bucket": "projeto-calculadora-fcea3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670629745408:android:535c822c351359664599e5",
+        "android_client_info": {
+          "package_name": "com.example.teste2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM8ovK_BmaRg47bAW-J55tFRjcSM4uZ2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
