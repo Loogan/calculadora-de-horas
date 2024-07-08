@@ -59,7 +59,10 @@ public class FormLogin extends AppCompatActivity {
         esqueci_senha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TelaRedefine();
+
+                Intent intent = new Intent(FormLogin.this, FormRedefine.class);
+                startActivity(intent);
+            
             }
         });
 

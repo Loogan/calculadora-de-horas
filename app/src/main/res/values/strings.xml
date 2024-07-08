@@ -6,6 +6,7 @@
     <string name="esqueci_senha">Esqueci minha senha</string>
     <string name="bt_login">Login</string>
     <string name="bt_cadastro">Cadastrar</string>
+    <string name="bt_redefine">Redefinir</string>
     <string name="text_cadastro">Cadastro</string>
 
     <string name="cadastro_nome">Nome:</string>

@@ -71,14 +71,14 @@
                 <EditText
                     android:id="@+id/edit_rg"
                     style="@style/Edit_text"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/edit_text_bg"
-                    android:hint="@string/rg"
                     android:drawableStart="@drawable/rg_icon"
-                    android:inputType="number"
                     android:drawablePadding="10dp"
                     android:drawableTint="@color/black"
-                    android:paddingStart="10dp"
-                    android:layout_marginTop="10dp"/>
+                    android:hint="@string/rg"
+                    android:inputType="number"
+                    android:paddingStart="10dp" />
 
                 <EditText
                     android:id="@+id/edit_senha"

@@ -7,4 +7,147 @@
     android:layout_height="match_parent"
     tools:context=".FormRedefine">
 
+
+    <View
+        android:id="@+id/top_Bg"
+        style="@style/top_bg"
+        android:background="@drawable/top_bg"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="LIEBHERR"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        style="@style/container_logo"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_bg">
+
+            <ImageView
+                style="@style/logo"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_redefine"
+        style="@style/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layout_height="450dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="Redefinição"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/redefine_nome"
+                style="@style/Edit_text"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/cadastro_nome"
+                android:drawableStart="@drawable/name_icon"
+                android:inputType="textPersonName"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:paddingStart="10dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:id="@+id/redefine_rg"
+                style="@style/Edit_text"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/cadastro_rg"
+                android:drawableStart="@drawable/rg_icon"
+                android:inputType="number"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/redefine_senha"
+                style="@style/Edit_text"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/cadastro_senha"
+                android:drawableStart="@drawable/senha_icon"
+                android:inputType="textPassword"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/redefine_confirmar_senha"
+                style="@style/Edit_text"
+                android:background="@drawable/edit_text_bg"
+                android:hint="@string/confirmar_senha"
+                android:drawableStart="@drawable/senha_icon"
+                android:inputType="textPassword"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/black"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_redefine"
+                style="@style/bt_login"
+                android:text="@string/bt_redefine"
+                android:background="@drawable/button_bg"/>
+        </LinearLayout>
+
+        <!-- ProgressBar-->
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/redefine_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:indeterminateTint="@color/my_primary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

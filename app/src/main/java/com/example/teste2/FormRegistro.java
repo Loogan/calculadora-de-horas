@@ -3,10 +3,12 @@ package com.example.teste2;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +22,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class FormRegistro extends AppCompatActivity {
     private EditText cadastro_nome,cadastro_rg,cadastro_senha,cadastro_confirmar_senha;
     private Button bt_cadastrar;
+    private ProgressBar progressBar;
     String[] mensagens = {"Preencha todos os campos!", "As senhas não são iguais."};
 
     @Override
@@ -59,8 +62,19 @@ public class FormRegistro extends AppCompatActivity {
                     snackbar.show();
 
                 } else{
-                    Intent intent = new Intent(FormRegistro.this, FormLogin.class);
-                    startActivity(intent);
+
+                    progressBar.setVisibility(View.VISIBLE);
+
+                    long delayMillis;
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent intent = new Intent(FormRegistro.this, FormLogin.class);
+                            startActivity(intent);
+                        }
+                    }, 3000);
+
                 }
 
             }
@@ -75,6 +89,7 @@ public class FormRegistro extends AppCompatActivity {
         cadastro_rg = findViewById(R.id.cadastro_rg);
         cadastro_senha = findViewById(R.id.cadastro_senha);
         cadastro_confirmar_senha = findViewById(R.id.cadastro_confirmar_senha);
+        progressBar = findViewById(R.id.cadastro_progressbar);
 
     }
 
